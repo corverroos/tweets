@@ -8,6 +8,7 @@ Although the assignment only processes a very limited amount of data, the soluti
    
 Some notes:
 - The solution implements `application/stream+json` REST endpoints, by which one can query the data.
+- The app is bootstrapped with the assignment's test data on startup, see the [ApplicationRunners](src/main/java/io/springtide/tweets/runners).
 - The assignment requires a certain console output, this is present in the output of an [integration test](src/test/java/io/springtide/tweets/TweetsApplicationTests.java) since the actual rendering of the data in a specific format can be argued to be client specific.
 
 ## Getting Started  
