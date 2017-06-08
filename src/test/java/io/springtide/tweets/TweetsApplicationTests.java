@@ -36,7 +36,6 @@ public class TweetsApplicationTests {
                 .expectStatus().isOk()
                 .expectHeader().contentType(MediaType.APPLICATION_STREAM_JSON)
                 .expectBodyList(User.class)
-                // Here we check that no tweets are from user "Martin"
                 .consumeWith(users::addAll);
 
         StringBuffer sb = new StringBuffer();
@@ -53,7 +52,6 @@ public class TweetsApplicationTests {
                     .expectStatus().isOk()
                     .expectHeader().contentType(MediaType.APPLICATION_STREAM_JSON)
                     .expectBodyList(Tweet.class)
-                    // Here we check that no tweets are from user "Martin"
                     .consumeWith(tweets::addAll);
 
             tweets.stream()

@@ -10,6 +10,7 @@ Some notes:
 - The solution implements `application/stream+json` REST endpoints, by which one can query the data.
 - The app is bootstrapped with the assignment's test data on startup, see the [ApplicationRunners](src/main/java/io/springtide/tweets/runners).
 - The assignment requires a certain console output, this is present in the output of an [integration test](src/test/java/io/springtide/tweets/TweetsApplicationTests.java) since the actual rendering of the data in a specific format can be argued to be client specific.
+- The repositories are designed to be easily split into micro services.
 
 ## Getting Started  
 
@@ -29,4 +30,6 @@ mvnw.bat test
 ## TODO
 
 Some more work is required/desired:
-- Replace the custom repositories with a proper JPA reactive datastore, like MongoDB.
+- Split the "follower" relationships out of the `UserRepository` into it's own repository.
+- If a repository uses data from other repositories, only reference it via `id`.
+- Replace the custom (assignment specific) repositories with a proper JPA reactive datastore, like MongoDB.
