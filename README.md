@@ -11,6 +11,7 @@ Some notes:
 - The app is bootstrapped with the assignment's test data on startup, see the [ApplicationRunners](src/main/java/io/springtide/tweets/runners).
 - The assignment requires a certain console output, this is present in the output of an [integration test](src/test/java/io/springtide/tweets/TweetsApplicationTests.java) since the actual rendering of the data in a specific format can be argued to be client specific.
 - The repositories are designed to be easily split into micro services.
+- Reactive streams was only implemented for reading, since writing does not require scalabilty at this point. 
 
 ## Getting Started  
 
